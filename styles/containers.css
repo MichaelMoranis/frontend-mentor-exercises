@@ -26,6 +26,19 @@ section {
     max-height: 90%;
 }
 
+h1 {
+    font-size: 1.9em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+h3 {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
 @media screen and (max-width: 1260px) {
     main {
         margin: auto;

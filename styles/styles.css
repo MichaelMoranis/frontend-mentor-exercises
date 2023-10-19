@@ -16,5 +16,19 @@
     width: 80%;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}
 
+li {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.img__list {
+    padding-right: 1em;
+}
 
