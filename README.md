@@ -1,22 +1,28 @@
-# Frontend Mentor - Formulário de inscrição em newsletter com mensagem de sucesso
+# Frontend Mentor - Formulário de inscrição em boletim informativo com solução de mensagem de sucesso
 
-![Visualização do design do formulário de inscrição no boletim informativo com desafio de codificação de mensagem de sucesso](./design/desktop-preview.jpg)
+Esta é uma solução para o [formulário de inscrição em boletim informativo com desafio de mensagem de sucesso no Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Os desafios do Frontend Mentor ajudam você a melhorar suas habilidades de codificação através da construção de projetos realistas.
 
-## Bem-vindo! 👋
+## Índice
 
-Obrigado por conferir este desafio de codificação front-end.
+- [Visão geral](#Desenvolver e aprimorar minhas habilidades como desenvolvedor frontend !)
+   - [O desafio](#construir um formulario onde o usuario insere seu email e quando clicado no botao receba uma mensagem de sucesso, ou mensagens de erro caso algo de errado)
+   - [Captura de tela](#captura de tela)
+   - [Links](#links)
+- [Meu processo](#meu-processo)
+   - [Construído com](#construído com)
+   - [O que aprendi](#o que aprendi)
+   - [Desenvolvimento contínuo](#desenvolvimento contínuo)
+   - [Recursos úteis](#useful-resources)
+- [Autor](#autor)
+- [Agradecimentos](#agradecimentos)
 
-Os desafios do [Frontend Mentor](https://www.frontendmentor.io) ajudam você a melhorar suas habilidades de codificação criando projetos realistas.
+**Observação: exclua esta nota e atualize o índice com base nas seções que você mantém.**
 
-**Para fazer este desafio, você precisa de um conhecimento básico de HTML, CSS e JavaScript.**
+## Visão geral
 
-## O desafio
+### O desafio
 
-Seu desafio é construir este formulário de boletim informativo e fazê-lo parecer o mais próximo possível do design.
-
-Você pode usar qualquer ferramenta que desejar para ajudá-lo a completar o desafio. Então, se você tem algo que gostaria de praticar, sinta-se à vontade para tentar.
-
-Seus usuários devem ser capazes de:
+Os usuários devem ser capazes de:
 
 - Adicione o e-mail e envie o formulário
 - Veja uma mensagem de sucesso com seu e-mail após enviar o formulário com sucesso
@@ -26,51 +32,58 @@ Seus usuários devem ser capazes de:
 - Veja o layout ideal da interface dependendo do tamanho da tela do dispositivo
 - Veja os estados de foco e foco para todos os elementos interativos na página
 
-Quer algum apoio no desafio? [Junte-se à nossa comunidade](https://www.frontendmentor.io/community) e tire dúvidas no canal **#help**.
+### Captura de tela
 
-## Onde encontrar tudo
+![](./screenshot.png)
 
-Sua tarefa é construir o projeto com os designs dentro da pasta `/design`. Você encontrará uma versão móvel e uma versão desktop do design.
+![Alt text](image.png)
 
-Os designs estão em formato estático JPG. Usar JPGs significa que você precisará usar seu bom senso para estilos como `tamanho da fonte`, `preenchimento` e `margem`.
+###Links
 
-Se desejar que os arquivos de design (fornecemos versões Sketch e Figma) inspecionem o design com mais detalhes, você pode [inscrever-se como membro PRO] (https://www.frontendmentor.io/pro).
+- URL da solução: [Adicione o URL da solução aqui](https://your-solution-url.com)
+- URL do site ativo: [Adicione o URL do site ativo aqui](https://your-live-site-url.com)
 
-Todos os ativos necessários para este projeto estão na pasta `/assets`. As imagens já são exportadas para o tamanho de tela correto e otimizadas.
+## Meu processo
 
-Também incluímos arquivos de fontes variáveis e estáticas para as fontes necessárias para este projeto. Você pode optar por vincular ao Google Fonts ou usar os arquivos de fontes locais para hospedar as fontes você mesmo. Observe que removemos os arquivos de fontes estáticas para as espessuras de fonte que não são necessárias para este projeto.
+### Construído com
 
-Há também um arquivo `style-guide.md` contendo as informações que você precisa, como paleta de cores e fontes.
+- Marcação HTML5 semântica
+- Propriedades personalizadas CSS
+- Caixa flexível
+- Flexbox CSS
+- Fluxo de trabalho voltado para dispositivos móveis
 
-## Construindo seu projeto
 
-Sinta-se à vontade para usar qualquer fluxo de trabalho com o qual se sinta confortável. Abaixo está um processo sugerido, mas não parece necessário seguir estas etapas:
+### O que eu aprendi
 
-1. Inicialize seu projeto como um repositório público no [GitHub](https://github.com/). A criação de um repositório tornará mais fácil compartilhar seu código com a comunidade se você precisar de ajuda. Se você não tiver certeza de como fazer isso, [leia este recurso Try Git](https://try.github.io/).
-2. Configure seu repositório para publicar seu código em um endereço da web. Isso também será útil se você precisar de ajuda durante um desafio, pois você pode compartilhar o URL do seu projeto com o URL do seu repositório. Existem várias maneiras de fazer isso e fornecemos algumas recomendações abaixo.
-3. Analise os designs para começar a planejar como você abordará o projeto. Esta etapa é crucial para ajudá-lo a pensar no futuro para que as classes CSS criem estilos reutilizáveis.
-4. Antes de adicionar qualquer estilo, estruture seu conteúdo com HTML. Escrever seu HTML primeiro pode ajudar a concentrar sua atenção na criação de conteúdo bem estruturado.
-5. Escreva os estilos básicos do seu projeto, incluindo estilos de conteúdo geral, como `font-family` e `font-size`.
-6. Comece a adicionar estilos ao topo da página e vá descendo. Só passe para a próxima seção quando estiver satisfeito por ter concluído a área em que está trabalhando.
+Nesse projeto pude por em pratica meus conhecimentos basicos de html, css e javascript, preferencialmente sobre o javascript, na manipulacao da API do dom e usos de metodos nativos da linguagem, como o uso do classList, onde a pouco tempo eu sentia dificuldade ao usar essas funcionalidades da linguagem, segue abaixo alguns exemplos.
 
-## Implantando seu projeto
+```js
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    if(input.value === "") {
+        erro.innerHTML = "este campo nao pode ficar vazio";
+        erro.fontSize = "12px";
+        erro.style.color = "red";
+        console.log("campo vazio")
+    } else if(regexEmailGmail.test(input.value) != true) {
+        erro.textContent = "formato de email incorreto !!"
+    } else {
+        dashboard.classList.remove("none");
+        dashboard.classList.add("block");
+        main.classList.add("none");
+        sucessMensage.innerHTML = `Um email de confirmação foi enviado para
+        ${input.value}. Por favor, abra-o e clique no botão dentro para
+        Confirme sua inscrição.`;
+        console.log("form capturado com sucesso")
+        input.value = "";
+    }
+    erro.style.color = "red";
+})
 
-Conforme mencionado acima, há muitas maneiras de hospedar seu projeto gratuitamente. Nossos anfitriões recomendados são:
+```
 
-- [Páginas do GitHub](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+### Desenvolvimento contínuo
 
-Você pode hospedar seu site usando uma dessas soluções ou qualquer um de nossos outros provedores confiáveis. [Leia mais sobre nossos hosts recomendados e confiáveis](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+Contudo pretendo continuar a praticar cada vez mais conceitos basicos das tecnologias principais no desenvolvimento frontend, treino de logica de programacao, estilos e estruturas dos conteudos das paginas, para que assim eu sinta algum conforto quando tiver que lidar com ferramentas mais modernas avancadas e complexas dessa stack principal do frontend.
 
-## Crie um `README.md` personalizado
-
-Recomendamos fortemente substituir este `README.md` por um personalizado. Fornecemos um modelo dentro do arquivo [`README-template.md`](./README-template.md) neste código inicial.
-
-O modelo fornece um guia sobre o que adicionar. Um `README` personalizado irá ajudá-lo a explicar seu projeto e refletir sobre seus aprendizados. Fique à vontade para editar nosso modelo o quanto quiser.
-
-Depois de adicionar suas informações ao modelo, exclua este arquivo e renomeie o arquivo `README-template.md` para `README.md`. Isso fará com que ele apareça como o arquivo README do seu repositório.
-
-## Enviando sua solução
-
-Envie sua solução na plataforma para que o resto da comunidade veja. Siga nosso ["Guia completo para enviar soluções"](https://medium.com/frontend-mentor/a-complete-guide-to-subposing
