@@ -4,20 +4,19 @@ const main = document.querySelector("main");
 const input = document.querySelector("input");
 const buttonDashboard = document.querySelector(".dissmiss")
 const sucessMensage = document.querySelector(".dashboard__paragraf");
-const p = document.createElement("p");
+const erro = document.querySelector(".erro");
 const regexEmailGmail = /^[\w.-]+@gmail\.com$/;
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-
-    if(regexEmailGmail.test(input.value) != true) {
-        p.textContent = "formato de email incorreto !!, digite seu email novamente !!"
-    } else if(input.value === "") {
-        p.innerHTML = "este campo nao pode ficar vazio";
-        p.style.backgroundColor = "red";
-        p.style.color = "black";
+    if(input.value === "") {
+        erro.innerHTML = "este campo nao pode ficar vazio";
+        erro.fontSize = "12px";
+        erro.style.color = "red";
         console.log("campo vazio")
-    }  else {
+    } else if(regexEmailGmail.test(input.value) != true) {
+        erro.textContent = "formato de email incorreto !!"
+    } else {
         dashboard.classList.remove("none");
         dashboard.classList.add("block");
         main.classList.add("none");
@@ -27,9 +26,7 @@ form.addEventListener("submit", function(event) {
         console.log("form capturado com sucesso")
         input.value = "";
     }
-    p.style.backgroundColor = "red";
-    p.style.color = "black";
-    form.appendChild(p);
+    erro.style.color = "red";
 })
 
 buttonDashboard.addEventListener("click", function() {
