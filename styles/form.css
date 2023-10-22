@@ -16,6 +16,10 @@ input {
     border-width: 1px;
 }
 
+input:invalid {
+    border: 2px dashed red;
+  }
+
 .button {
     padding: 1em;
     border-radius: 8px;
